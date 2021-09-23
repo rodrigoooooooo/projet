@@ -20,7 +20,7 @@ class App extends Component {
           </button>
         </div>
 
-        <div class="card">
+        <div class="card m-4">
           <header class="card-header">
             <p class="card-header-title">Component</p>
             <button class="card-header-icon" aria-label="more options">
@@ -31,10 +31,19 @@ class App extends Component {
           </header>
           <div class="card-content">
             <div class="content">
-              Joao e gay
-              <a href="#">@bulmaio</a>. <a href="#">#css</a>{" "}
-              <a href="#">#responsive</a>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              <div className="app">
+                <input
+                  className="button"
+                  type="file"
+                  onChange={this.fileSelectedHandler}
+                />
+                <button
+                  className="button is-success"
+                  onClick={this.uploadHandler}
+                >
+                  Upload
+                </button>
+              </div>
             </div>
           </div>
           <footer class="card-footer">
