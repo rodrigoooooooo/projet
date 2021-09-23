@@ -1,10 +1,26 @@
 import React, { Component } from "react";
 import "./App.css";
+import axios from 'axios';
+
 
 class App extends Component {
+  state = {
+    selectedFile: null
+  }
+
   fileSelectedHandler = (event) => {
     console.log(event.target.files[0]);
   };
+
+  uploadHandler = () => {
+    const formData = new FormData()
+    formData.append(
+      'myFile',
+      this.state.selectedFile,
+      this.state.selectedFile.name
+    )
+    axios.post('my-domain.com/file-upload', formData)
+  }
 
   render() {
     return (
