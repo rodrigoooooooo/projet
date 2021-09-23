@@ -63,8 +63,35 @@ class App extends Component {
                 <a href="#" class="card-footer-item">
                 <button class="button is-link is-outlined is-rounded" onClick={this.uploadHandler}>Upload</button>
 
+<<<<<<< HEAD
                 </a>
               </footer>
+=======
+        <div class="card m-4">
+          <header class="card-header">
+            <p class="card-header-title">Component</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <div className="app">
+                <input
+                  className="button"
+                  type="file"
+                  onChange={this.fileSelectedHandler}
+                />
+                <button
+                  className="button is-success"
+                  onClick={this.uploadHandler}
+                >
+                  Upload
+                </button>
+              </div>
+>>>>>>> origin/master
             </div>
           </main>
         </div>
