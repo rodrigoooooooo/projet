@@ -9,8 +9,8 @@ class App extends Component {
   render () {
     return (
     <div className="app">
-      <input type="file" onChange={this.fileSelectedHandler}/>
-      <button onClick={this.uploadHandler}>Upload</button>
+      <input className="button" type="file" onChange={this.fileSelectedHandler}/>
+      <button className="button is-success" onClick={this.uploadHandler}>Upload</button>
     </div>
       );
   }
