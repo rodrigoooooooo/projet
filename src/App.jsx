@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
+import logo from "./logo.svg";
 import axios from "axios";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -24,42 +25,49 @@ class App extends Component {
   render() {
     return (
       <>
-        <main class="app">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title is-centered">3two1</p>
-              <button class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div className="app">
+        <div className="App">
+          <main className="App-header">
+            <img
+              src={logo}
+              style={{ height: 250, width: 317 }}
+              ClassName="App-logo"
+              alt="logo"
+            />
+            <i>being first in line has never been so easy.</i>
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Selecione a Imagem</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div className="bruh">
+                  </div>
                 </div>
               </div>
-            </div>
-            <footer class="card-footer">
-              <a href="#" class="card-footer-item">
-              <input
+              <footer class="card-footer">
+                <a href="#" class="card-footer-item">
+                  <input
                     className="button"
-                    style={{display: 'none'}}
+                    style={{ display: "none" }}
                     type="file"
                     onChange={this.fileSelectedHandler}
-                    ref={fileInput => this.fileInput = fileInput}/>
-                <button 
-                className="button"
-                onClick={() => this.fileInput.click()}>Escolher Foto</button>
-              </a>
-              <a href="#" class="card-footer-item">
-                <button
-                  className="button is-success"
-                  onClick={this.uploadHandler}>Upload</button>
-              </a>
-            </footer>
-          </div>
-        </main>
+                    ref={(fileInput) => (this.fileInput = fileInput)}
+                  />
+                  <button
+                    class="button is-link is-outlined is-rounded"
+                    onClick={() => this.fileInput.click()}
+                  >
+                    Escolher Imagem
+                  </button>
+                </a>
+                <a href="#" class="card-footer-item">
+                <button class="button is-link is-outlined is-rounded" onClick={this.uploadHandler}>Upload</button>
+
+                </a>
+              </footer>
+            </div>
+          </main>
+        </div>
       </>
     );
   }

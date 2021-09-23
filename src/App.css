@@ -1,56 +1,52 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
 .App {
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo {
+  align-self: center;
+  height: 40vmax;
+  pointer-events: none;
 }
 
 .App-header {
-  background-color: #444444;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 51px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .card {
-  margin-top: 15%;
-  margin-left: 35%;
-  margin-right: 35%;
-  background-color: #4f4f4f !important;
+  width: 90%;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #161616 !important;
   border-radius: 20px !important;
 }
 
-.card-header-title{
- color: #ececec !important;
+.card-header-title {
+  color: #faa500 !important;
+  justify-content: space-evenly !important;
 }
 
-.button{
-  border-radius: 15px !important;
-  background-color:#da5518 !important;
-  border-color: #00000000 !important;
+.button {
+  color: #faa500;
+  border-radius: 15px;
+  /* background-color: #faa500; */
 }
 
-.upload-button{
+.upload-button {
   margin: 0.5rem;
   align-content: center !important;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
